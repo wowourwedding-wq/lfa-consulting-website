@@ -3,3 +3,6 @@
 !index.html
 !.gitignore
 !README.md
+!.github
+!.github/workflows
+!.github/workflows/deploy.yml
