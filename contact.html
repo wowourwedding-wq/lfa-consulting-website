@@ -43,8 +43,12 @@
       </div>
       <div class="form-card">
         <h3 style="color:var(--navy);font-size:20px;margin-bottom:16px">Request your free consultation</h3>
-        <!-- Replace YOUR_FORM_ID with your free Formspree endpoint (formspree.io). Until then this opens your email. -->
-        <form id="enquiryForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <!-- Emails submissions to lfaconsulting1@outlook.com via FormSubmit (free, no account). First submission requires a one-time activation click in your inbox. -->
+        <form id="enquiryForm" action="https://formsubmit.co/ajax/lfaconsulting1@outlook.com" method="POST">
+          <input type="hidden" name="_subject" value="New website enquiry — LFA Consulting">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <div class="field"><label>Name</label><input type="text" name="name" required placeholder="Your name"></div>
           <div class="field"><label>Email</label><input type="email" name="email" required placeholder="you@email.com"></div>
           <div class="field"><label>Phone / WhatsApp</label><input type="tel" name="phone" placeholder="+27 ..."></div>
@@ -71,7 +75,11 @@
   <div class="wrap">
     <div class="sec-head"><div class="eyebrow">Your experience matters</div><h2>Leave a review</h2><p>Worked with us? Share a rating — reviews are checked before they appear on the site.</p></div>
     <div class="form-card" style="max-width:640px;margin:0 auto">
-      <form id="reviewForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form id="reviewForm" action="https://formsubmit.co/ajax/lfaconsulting1@outlook.com" method="POST">
+        <input type="hidden" name="_subject" value="New website review — LFA Consulting">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <label style="font-size:13.5px;font-weight:600;color:var(--navy)">Your rating</label>
         <div class="stars-input" id="starInput"><span class="s" data-v="1">★</span><span class="s" data-v="2">★</span><span class="s" data-v="3">★</span><span class="s" data-v="4">★</span><span class="s" data-v="5">★</span></div>
         <input type="hidden" name="rating" id="ratingField" value="">
@@ -105,26 +113,25 @@ function paint(v){stars.forEach(function(s){s.classList.toggle('on',+s.dataset.v
 stars.forEach(function(s){s.addEventListener('mouseenter',function(){paint(+s.dataset.v);});s.addEventListener('click',function(){rf.value=s.dataset.v;paint(+s.dataset.v);});});
 document.getElementById('starInput').addEventListener('mouseleave',function(){paint(+(rf.value||0));});
 // generic submit handler with Formspree AJAX + mailto fallback
-function wire(formId, okId, subject, extraCheck){
+function wire(formId, okId, extraCheck){
   var form=document.getElementById(formId);
   form.addEventListener('submit',function(e){
-    if(extraCheck && !extraCheck()){e.preventDefault();return;}
-    var action=form.getAttribute('action');
-    if(action.indexOf('YOUR_FORM_ID')!==-1){
-      e.preventDefault();
-      var fd=new FormData(form),body='';
-      fd.forEach(function(v,k){body+=k+': '+v+'%0D%0A';});
-      window.location.href='mailto:lfaconsulting1@outlook.com?subject='+encodeURIComponent(subject)+'&body='+body;
-      return;
-    }
     e.preventDefault();
-    fetch(action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
-      .then(function(r){if(r.ok){form.style.display='none';document.getElementById(okId).style.display='block';}else{form.submit();}})
-      .catch(function(){form.submit();});
+    if(extraCheck && !extraCheck()){return;}
+    var action=form.getAttribute('action');
+    var btn=form.querySelector('button[type=submit]'); var label=btn?btn.textContent:'';
+    if(btn){btn.disabled=true;btn.textContent='Sending…';}
+    fetch(action,{method:'POST',body:new URLSearchParams(new FormData(form)),headers:{'Accept':'application/json'}})
+      .then(function(r){return r.ok;})
+      .then(function(ok){
+        if(ok){form.style.display='none';document.getElementById(okId).style.display='block';}
+        else{if(btn){btn.disabled=false;btn.textContent=label;}alert('Sorry, something went wrong. Please email lfaconsulting1@outlook.com or WhatsApp us.');}
+      })
+      .catch(function(){if(btn){btn.disabled=false;btn.textContent=label;}alert('Network error — please email lfaconsulting1@outlook.com or WhatsApp us.');});
   });
 }
-wire('enquiryForm','okEnq','New website enquiry');
-wire('reviewForm','okRev','New website review',function(){if(!rf.value){alert('Please tap a star rating first.');return false;}return true;});
+wire('enquiryForm','okEnq');
+wire('reviewForm','okRev',function(){if(!rf.value){alert('Please tap a star rating first.');return false;}return true;});
 </script>
 </body>
 </html>
