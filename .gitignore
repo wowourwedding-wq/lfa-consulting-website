@@ -1,8 +1,14 @@
-# Live site contains only the website. Source/design files stay local.
+# Live site = the pages + stylesheet only. Everything else stays local.
 /*
-!index.html
 !.gitignore
 !README.md
+!styles.css
+!index.html
+!business.html
+!personal-tax.html
+!immigration.html
+!about.html
+!contact.html
 !.github
 !.github/workflows
 !.github/workflows/deploy.yml

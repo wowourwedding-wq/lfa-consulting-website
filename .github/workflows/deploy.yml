@@ -15,10 +15,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Stage site (only index.html goes live)
+      - name: Stage site (all pages + stylesheet)
         run: |
           mkdir -p dist
-          cp index.html dist/index.html
+          cp *.html dist/
+          cp styles.css dist/
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3

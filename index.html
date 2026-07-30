@@ -3,187 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LFA Consulting — Accounting, Tax &amp; Advisory | SARS Compliance Nationwide</title>
-<meta name="description" content="LFA Consulting: SARS-compliant accounting, tax and business advisory. Company registration, tax returns, monthly compliance retainers, B-BBEE and tenders. Free initial consultation, nationwide.">
+<title>LFA Consulting — Accounting, Tax, Advisory &amp; Immigration | South Africa</title>
+<meta name="description" content="LFA Consulting: SARS-compliant accounting, tax, business advisory and immigration support. Company registration, tax returns, compliance retainers, visas and waivers. Free initial consultation, nationwide.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --navy:#0A2342; --navy-2:#081a33; --gold:#D4AF37; --gold-soft:#E6CC74;
-    --ink:#333333; --muted:#5f6b78; --line:#e4e8ee; --cream:#f5f7fa; --bg:#ffffff;
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{font-family:'Montserrat',Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;}
-  h1,h2,h3,.serif{font-family:'Playfair Display',Georgia,serif;}
-  a{color:inherit;text-decoration:none;}
-  .wrap{max-width:1120px;margin:0 auto;padding:0 22px;}
-  .gold{color:var(--gold);}
-  .btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;padding:14px 26px;border-radius:8px;
-    letter-spacing:.3px;transition:.2s;border:none;cursor:pointer;font-size:15px;font-family:inherit;}
-  .btn:hover{background:var(--gold-soft);transform:translateY(-1px);}
-  .btn-ghost{background:transparent;border:1.6px solid var(--gold);color:var(--gold);}
-  .btn-ghost:hover{background:var(--gold);color:var(--navy);}
-  .eyebrow{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:700;}
-
-  /* NAV */
-  header.nav{position:sticky;top:0;z-index:50;background:rgba(12,28,51,.97);backdrop-filter:blur(6px);
-    border-bottom:1px solid rgba(212,175,55,.25);}
-  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;}
-  .logo{display:flex;align-items:center;gap:12px;color:#fff;}
-  .logo .nm{font-family:'Playfair Display',serif;font-weight:800;font-size:21px;letter-spacing:.5px;}
-  .logo .nm b{color:var(--gold);}
-  .navlinks{display:flex;gap:26px;align-items:center;}
-  .navlinks a{color:#dfe5ee;font-size:14.5px;font-weight:500;}
-  .navlinks a:hover{color:var(--gold);}
-  .navlinks .btn{padding:10px 20px;font-size:14px;}
-  .burger{display:none;background:none;border:none;color:#fff;font-size:26px;cursor:pointer;}
-
-  /* HERO */
-  .hero{background:var(--navy);color:#fff;position:relative;overflow:hidden;
-    background-image:radial-gradient(circle at 85% -5%, rgba(212,175,55,.20), transparent 45%),
-                     radial-gradient(circle at 5% 110%, rgba(212,175,55,.12), transparent 45%);}
-  .hero .wrap{padding:84px 22px 90px;position:relative;z-index:2;}
-  .hero h1{font-size:46px;line-height:1.12;font-weight:800;max-width:760px;margin:18px 0 0;}
-  .hero h1 span{color:var(--gold);}
-  .hero p.lead{font-size:18px;color:#d7dee8;max-width:620px;margin:22px 0 32px;}
-  .hero .cta-row{display:flex;gap:14px;flex-wrap:wrap;}
-  .trust{display:flex;gap:30px;flex-wrap:wrap;margin-top:48px;padding-top:30px;border-top:1px solid rgba(255,255,255,.12);}
-  .trust .t{min-width:120px;}
-  .trust .t b{font-family:'Playfair Display',serif;font-size:30px;color:var(--gold);display:block;line-height:1;}
-  .trust .t span{font-size:13px;color:#c4cdd9;letter-spacing:.3px;}
-
-  /* SECTION */
-  section{padding:74px 0;}
-  .sec-head{text-align:center;max-width:640px;margin:0 auto 46px;}
-  .sec-head h2{font-size:34px;color:var(--navy);margin:10px 0 12px;line-height:1.15;}
-  .sec-head p{color:var(--muted);font-size:16px;}
-
-  /* SERVICES */
-  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
-  .scard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px 26px;position:relative;transition:.2s;}
-  .scard:hover{box-shadow:0 14px 36px rgba(12,28,51,.10);transform:translateY(-3px);border-color:var(--gold-soft);}
-  .scard .ic{font-size:26px;}
-  .scard h3{font-size:20px;color:var(--navy);margin:12px 0 8px;}
-  .scard p{color:var(--muted);font-size:14.5px;}
-  .scard .from{margin-top:16px;display:flex;align-items:baseline;gap:8px;}
-  .scard .from b{font-family:'Playfair Display',serif;font-size:24px;color:var(--gold);}
-  .scard .from small{font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);}
-  .alsobar{margin-top:26px;background:var(--navy);color:#e3e9f1;border-radius:14px;padding:24px 30px;font-size:15px;text-align:center;}
-  .alsobar b{color:var(--gold);}
-
-  /* TRACK RECORD */
-  .record{background:var(--cream);}
-  .rgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:10px;}
-  .ritem{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 22px;text-align:center;}
-  .ritem .n{font-family:'Playfair Display',serif;font-size:38px;color:var(--gold);line-height:1;}
-  .ritem .l{font-size:13.5px;color:var(--navy);font-weight:600;margin-top:8px;}
-  .ritem .d{font-size:12.5px;color:var(--muted);margin-top:4px;}
-
-  /* WHY */
-  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-  .why-c{padding:28px 24px;border-radius:14px;background:#fff;border:1px solid var(--line);}
-  .why-c .b{width:46px;height:46px;border-radius:50%;background:var(--cream);border:1.6px solid var(--gold);
-    display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:20px;margin-bottom:14px;}
-  .why-c h3{font-size:18px;color:var(--navy);margin-bottom:6px;}
-  .why-c p{color:var(--muted);font-size:14.5px;}
-
-  /* REVIEWS */
-  .reviews{background:var(--navy);color:#fff;}
-  .reviews .sec-head h2{color:#fff;}
-  .reviews .sec-head p{color:#c4cdd9;}
-  .rev-summary{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:36px;flex-wrap:wrap;}
-  .rev-summary .big{font-family:'Playfair Display',serif;font-size:46px;color:var(--gold);line-height:1;}
-  .rev-summary .stars{color:var(--gold);font-size:22px;letter-spacing:2px;}
-  .rev-summary .cnt{color:#c4cdd9;font-size:14px;}
-  .revgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-  .revcard{background:rgba(255,255,255,.05);border:1px solid rgba(212,175,55,.28);border-radius:14px;padding:24px 22px;}
-  .revcard .stars{color:var(--gold);font-size:15px;letter-spacing:2px;margin-bottom:10px;}
-  .revcard p{font-size:14.5px;color:#e7ecf3;font-style:italic;}
-  .revcard .who{margin-top:14px;font-size:13.5px;}
-  .revcard .who b{color:#fff;}
-  .revcard .who span{color:#a9b4c4;display:block;font-size:12.5px;}
-  .rev-cta{text-align:center;margin-top:38px;}
-
-  /* FORM */
-  .form-wrap{max-width:640px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:16px;padding:38px 34px;}
-  .stars-input{display:flex;gap:6px;font-size:34px;color:#d7d2c4;cursor:pointer;margin:6px 0 18px;}
-  .stars-input .s{transition:.15s;}
-  .stars-input .s.on{color:var(--gold);}
-  .field{margin-bottom:16px;}
-  .field label{display:block;font-size:13.5px;font-weight:600;color:var(--navy);margin-bottom:6px;}
-  .field input,.field textarea{width:100%;border:1.4px solid var(--line);border-radius:9px;padding:12px 14px;font-family:inherit;font-size:15px;color:var(--ink);background:var(--bg);}
-  .field input:focus,.field textarea:focus{outline:none;border-color:var(--gold);background:#fff;}
-  .field textarea{min-height:110px;resize:vertical;}
-  .form-note{font-size:12.5px;color:var(--muted);margin-top:14px;text-align:center;}
-  .ok-msg{display:none;background:#eaf6ed;border:1px solid #b7e0c2;color:#1c6b34;padding:16px;border-radius:10px;text-align:center;font-size:14.5px;margin-top:16px;}
-
-  /* CONTACT */
-  .contact{background:var(--cream);}
-  .cgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;}
-  .cinfo h2{font-size:32px;color:var(--navy);margin-bottom:14px;}
-  .cinfo p{color:var(--muted);margin-bottom:24px;font-size:16px;}
-  .cline{display:flex;align-items:center;gap:14px;margin-bottom:16px;font-size:15.5px;}
-  .cline .k{width:42px;height:42px;border-radius:10px;background:var(--navy);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:18px;flex:0 0 auto;}
-  .cline a:hover{color:var(--gold);}
-  .cpanel{background:var(--navy);color:#fff;border-radius:16px;padding:34px;text-align:center;
-    background-image:radial-gradient(circle at 80% 0%, rgba(212,175,55,.22), transparent 50%);}
-  .cpanel .eyebrow{margin-bottom:10px;}
-  .cpanel h3{font-size:26px;margin-bottom:8px;}
-  .cpanel p{color:#c8d1dd;font-size:14.5px;margin-bottom:22px;}
-  .cpanel .btn{width:100%;margin-bottom:12px;}
-
-  /* FOOTER */
-  footer{background:var(--navy-2);color:#aeb8c6;padding:40px 0 28px;text-align:center;font-size:13.5px;border-top:1px solid rgba(212,175,55,.2);}
-  footer .logo{justify-content:center;margin-bottom:14px;}
-  footer a{color:var(--gold-soft);}
-
-  /* WHATSAPP FLOAT */
-  .wa{position:fixed;right:20px;bottom:20px;z-index:60;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;
-    display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 8px 22px rgba(0,0,0,.25);transition:.2s;}
-  .wa:hover{transform:scale(1.08);}
-
-  @media(max-width:860px){
-    .navlinks{display:none;} .burger{display:block;}
-    .navlinks.open{display:flex;position:absolute;top:70px;left:0;right:0;flex-direction:column;background:var(--navy);padding:18px 22px;gap:16px;border-bottom:1px solid rgba(212,175,55,.25);}
-    .hero h1{font-size:34px;} .cards,.why-grid,.revgrid{grid-template-columns:1fr;}
-    .rgrid{grid-template-columns:1fr 1fr;} .cgrid{grid-template-columns:1fr;} .sec-head h2{font-size:27px;}
-  }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- NAV -->
 <header class="nav">
   <div class="wrap">
-    <a class="logo" href="#top">
-      <svg width="38" height="38" viewBox="0 0 100 100" fill="none">
-        <circle cx="50" cy="50" r="46" stroke="#D4AF37" stroke-width="4"/>
-        <g fill="#D4AF37"><rect x="33" y="44" width="11" height="26" rx="1"/><rect x="45.5" y="34" width="11" height="36" rx="1"/><rect x="58" y="50" width="9" height="20" rx="1"/></g>
-      </svg>
+    <a class="logo" href="index.html">
+      <svg width="38" height="38" viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="46" stroke="#D4AF37" stroke-width="4"/><g fill="#D4AF37"><rect x="33" y="44" width="11" height="26" rx="1"/><rect x="45.5" y="34" width="11" height="36" rx="1"/><rect x="58" y="50" width="9" height="20" rx="1"/></g></svg>
       <span class="nm">LFA <b>Consulting</b></span>
     </a>
     <nav class="navlinks" id="menu">
-      <a href="#services">Services</a>
-      <a href="#record">Track Record</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
-      <a href="#contact" class="btn">Free Consultation</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="business.html">Business</a>
+      <a href="personal-tax.html">Personal Tax</a>
+      <a href="immigration.html">Immigration</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn">Free Consultation</a>
     </nav>
     <button class="burger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero" id="top" style="padding:0">
+<section class="hero">
   <div class="wrap">
-    <div class="eyebrow">Accounting · Tax · Advisory</div>
-    <h1>SARS compliance, handled properly — so you can <span>focus on your business.</span></h1>
-    <p class="lead">From company registration to monthly compliance, tax returns and B-BBEE, LFA Consulting gives you clear pricing, no hidden fees, and an advisor who actually picks up the phone.</p>
+    <div class="eyebrow">Accounting · Tax · Advisory · Immigration</div>
+    <h1>Compliance, tax and immigration — <span>handled with clarity.</span></h1>
+    <p class="lead">From company registration and SARS returns to personal tax and visa support, LFA Consulting gives you clear pricing, no hidden fees, and an advisor who actually picks up the phone.</p>
     <div class="cta-row">
-      <a href="#contact" class="btn">Book a free consultation</a>
-      <a href="#services" class="btn btn-ghost">View our services</a>
+      <a href="contact.html" class="btn">Book a free consultation</a>
+      <a href="business.html" class="btn btn-ghost">Explore our services</a>
     </div>
     <div class="trust">
       <div class="t"><b>5+</b><span>Companies registered</span></div>
@@ -194,50 +49,51 @@
   </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services">
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">What we do</div>
-      <h2>Four ways we get you compliant — and keep you there</h2>
-      <p>Clear starting prices. Your full requirements are scoped at your free initial consultation.</p>
+      <h2>Three ways we help you move forward</h2>
+      <p>Whether you're running a business, filing your own tax, or planning a move abroad — we've got you covered.</p>
     </div>
     <div class="cards">
-      <div class="scard">
+      <div class="card">
         <div class="ic">🏛️</div>
-        <h3>Company Registration &amp; Tax Number</h3>
-        <p>Start trading legally — CIPC company registration and your SARS tax number, handled from start to finish.</p>
-        <div class="from"><b>from R990</b><small>+ SARS Tax No. from R450</small></div>
+        <h3>Business Accounting, Tax &amp; Advisory</h3>
+        <p>Company registration, monthly compliance, tax returns, B-BBEE, trust accounting and audit preparation — all SARS-compliant.</p>
+        <a class="more" href="business.html">See business services →</a>
       </div>
-      <div class="scard">
-        <div class="ic">📑</div>
-        <h3>Monthly Compliance Retainer</h3>
-        <p>Bookkeeping, SARS monitoring and a dedicated point of contact — your compliance handled every month.</p>
-        <div class="from"><b>from R1,200<small style="font-size:14px;text-transform:none">/mo</small></b><small>Sole props to growing SMEs</small></div>
-      </div>
-      <div class="scard">
+      <div class="card">
         <div class="ic">🧾</div>
-        <h3>Tax Returns — ITR14, Provisional &amp; VAT</h3>
-        <p>Income tax (ITR14), provisional tax and VAT registration &amp; submissions — filed accurately and on time.</p>
-        <div class="from"><b>from R650</b><small>ITR14 from R950 · VAT reg R1,250</small></div>
+        <h3>Personal Tax &amp; Accounting</h3>
+        <p>Individual tax returns (ITR12), provisional tax, SARS registration, disputes and refunds — every deduction claimed for you.</p>
+        <a class="more" href="personal-tax.html">See personal tax →</a>
       </div>
-      <div class="scard">
-        <div class="ic">📊</div>
-        <h3>B-BBEE, Tenders &amp; Due Diligence</h3>
-        <p>B-BBEE certificates, tender &amp; CSD readiness and due-diligence reporting to help you win and grow.</p>
-        <div class="from"><b>from R750</b><small>Due diligence from R1,500</small></div>
+      <div class="card">
+        <div class="ic">🌍</div>
+        <h3>Immigration &amp; Visa Support</h3>
+        <p>Work, study, residence and visitor visas for 14+ destinations, plus permits and waivers — clear guidance, correct documentation.</p>
+        <a class="more" href="immigration.html">See immigration →</a>
       </div>
-    </div>
-    <div class="alsobar">
-      <b>Also under one roof:</b> trust account bookkeeping &amp; audit preparation · PAYE / UIF / SDL &amp; COIDA · CIPC annual returns · payroll &amp; HR advisory ·
-      business plans &amp; funding readiness · financial projections &amp; cash flow · company profiles.
-      <b> Just ask at your free consultation.</b>
     </div>
   </div>
 </section>
 
-<!-- TRACK RECORD -->
-<section class="record" id="record">
+<section class="alt" id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Why LFA Consulting</div>
+      <h2>Compliance you can trust, advice you can reach</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-c"><div class="b">✓</div><h3>Fully SARS-compliant</h3><p>Registered, accountable and always up to date with SARS and CIPC requirements.</p></div>
+      <div class="why-c"><div class="b">R</div><h3>Clear, honest pricing</h3><p>Transparent starting prices and no hidden fees — you know what you're paying, upfront.</p></div>
+      <div class="why-c"><div class="b">☎</div><h3>Personal, nationwide service</h3><p>Dedicated advisory support, delivered remotely to clients anywhere in South Africa.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="record">
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Proven results</div>
@@ -253,168 +109,60 @@
   </div>
 </section>
 
-<!-- WHY -->
-<section id="why">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Why LFA Consulting</div>
-      <h2>Compliance you can trust, advice you can reach</h2>
-    </div>
-    <div class="why-grid">
-      <div class="why-c"><div class="b">✓</div><h3>Fully SARS-compliant</h3><p>Registered, accountable, and always up to date with SARS and CIPC requirements.</p></div>
-      <div class="why-c"><div class="b">R</div><h3>Clear, honest pricing</h3><p>Transparent starting prices and no hidden fees — you know what you're paying, upfront.</p></div>
-      <div class="why-c"><div class="b">☎</div><h3>Personal, nationwide service</h3><p>Dedicated advisory support, delivered remotely to clients anywhere in South Africa.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="reviews" id="reviews">
+<section class="navy" id="reviews">
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Client reviews</div>
       <h2>What our clients say</h2>
       <p>Honest feedback from the businesses and individuals we serve.</p>
     </div>
-
-    <div class="rev-summary">
-      <div class="big" id="avgScore">5.0</div>
-      <div>
-        <div class="stars" id="avgStars">★★★★★</div>
-        <div class="cnt" id="revCount">Based on verified client feedback</div>
-      </div>
+    <div class="revgrid">
+      <div class="revcard"><div class="stars">★★★★★</div><p>“Registered my company and sorted my SARS tax number without any stress. Everything was explained clearly and the pricing was exactly as quoted.”</p><div class="who"><b>Verified client</b><span>Company registration · Gauteng</span></div></div>
+      <div class="revcard"><div class="stars">★★★★★</div><p>“They handle my company's returns and SARS every month. I no longer worry about deadlines — it's all taken care of professionally.”</p><div class="who"><b>Verified client</b><span>Monthly compliance retainer</span></div></div>
+      <div class="revcard"><div class="stars">★★★★★</div><p>“Helped me get COIDA compliant and prepared my financials. Responsive, knowledgeable and genuinely helpful throughout.”</p><div class="who"><b>Verified client</b><span>COIDA &amp; financial statements</span></div></div>
     </div>
-
-    <!-- Approved reviews. To add a real one: copy a block, edit the stars/quote/name, paste it in. -->
-    <div class="revgrid" id="revGrid">
-      <div class="revcard">
-        <div class="stars">★★★★★</div>
-        <p>“Registered my company and sorted my SARS tax number without any stress. Everything was explained clearly and the pricing was exactly as quoted.”</p>
-        <div class="who"><b>Verified client</b><span>Company registration · Gauteng</span></div>
-      </div>
-      <div class="revcard">
-        <div class="stars">★★★★★</div>
-        <p>“They handle my company's returns and SARS every month. I no longer worry about deadlines — it's all taken care of professionally.”</p>
-        <div class="who"><b>Verified client</b><span>Monthly compliance retainer</span></div>
-      </div>
-      <div class="revcard">
-        <div class="stars">★★★★★</div>
-        <p>“Helped me get COIDA compliant and prepared my financials. Responsive, knowledgeable and genuinely helpful throughout.”</p>
-        <div class="who"><b>Verified client</b><span>COIDA &amp; financial statements</span></div>
-      </div>
-    </div>
-
-    <div class="rev-cta">
-      <a href="#review-form" class="btn">★ Leave a review</a>
-    </div>
+    <div class="center" style="margin-top:34px"><a href="contact.html" class="btn">★ Leave a review</a></div>
   </div>
 </section>
 
-<!-- LEAVE A REVIEW -->
-<section id="review-form">
+<section class="ctaband">
   <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Your experience matters</div>
-      <h2>Rate your experience</h2>
-      <p>Worked with us? Share a rating below. Reviews are checked before they appear on the site.</p>
-    </div>
-
-    <div class="form-wrap">
-      <!-- IMPORTANT: replace the action URL with your own free Formspree endpoint (see setup notes). -->
-      <form id="reviewForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <label style="font-size:13.5px;font-weight:600;color:var(--navy);">Your rating</label>
-        <div class="stars-input" id="starInput">
-          <span class="s" data-v="1">★</span><span class="s" data-v="2">★</span><span class="s" data-v="3">★</span><span class="s" data-v="4">★</span><span class="s" data-v="5">★</span>
-        </div>
-        <input type="hidden" name="rating" id="ratingField" value="">
-
-        <div class="field"><label>Name</label><input type="text" name="name" required placeholder="Your name"></div>
-        <div class="field"><label>Service you used</label><input type="text" name="service" placeholder="e.g. Company registration, Tax returns, COIDA"></div>
-        <div class="field"><label>Email (not published)</label><input type="email" name="email" required placeholder="you@email.com"></div>
-        <div class="field"><label>Your review</label><textarea name="review" required placeholder="Tell us about your experience..."></textarea></div>
-
-        <button type="submit" class="btn" style="width:100%">Submit review</button>
-        <div class="form-note">We review every submission before publishing. We'll never share your email.</div>
-      </form>
-      <div class="ok-msg" id="okMsg">✓ Thank you! Your review has been sent and will appear after a quick check.</div>
+    <h2>Let's get you compliant</h2>
+    <p>Book your free initial consultation — we'll scope exactly what you need and give you a clear, honest quote.</p>
+    <div class="cta-row" style="justify-content:center">
+      <a href="https://wa.me/27615359002?text=Hi%20LFA%20Consulting%2C%20I%27d%20like%20a%20free%20consultation." class="btn">Chat on WhatsApp</a>
+      <a href="contact.html" class="btn btn-ghost">Contact us</a>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="wrap">
-    <div class="cgrid">
-      <div class="cinfo">
-        <div class="eyebrow">Get in touch</div>
-        <h2>Let's get you compliant</h2>
-        <p>Book your free initial consultation. We'll scope exactly what you need and give you a clear, honest quote — no obligation.</p>
-        <div class="cline"><div class="k">✆</div><a href="tel:+27615359002">+27 61 535 9002</a></div>
-        <div class="cline"><div class="k">✉</div><a href="mailto:lfaconsulting1@outlook.com">lfaconsulting1@outlook.com</a></div>
-        <div class="cline"><div class="k">🌐</div><a href="https://www.lfaconsulting.co.za">www.lfaconsulting.co.za</a></div>
-        <div class="cline"><div class="k">📍</div><span>Serving clients nationwide · Remote available</span></div>
-      </div>
-      <div class="cpanel">
-        <div class="eyebrow" style="color:var(--gold)">Free initial consultation</div>
-        <h3>Start the conversation</h3>
-        <p>Reach out today — we usually respond the same business day.</p>
-        <a href="https://wa.me/27615359002?text=Hi%20LFA%20Consulting%2C%20I%27d%20like%20a%20free%20consultation." class="btn">Chat on WhatsApp</a>
-        <a href="tel:+27615359002" class="btn btn-ghost" style="width:100%">Call now</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
   <div class="wrap">
-    <div class="logo">
-      <svg width="30" height="30" viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="46" stroke="#D4AF37" stroke-width="4"/><g fill="#D4AF37"><rect x="33" y="44" width="11" height="26" rx="1"/><rect x="45.5" y="34" width="11" height="36" rx="1"/><rect x="58" y="50" width="9" height="20" rx="1"/></g></svg>
-      <span class="nm" style="font-family:'Playfair Display',serif;font-weight:800;font-size:18px;color:#fff;">LFA <span class="gold">Consulting</span></span>
+    <div class="fgrid">
+      <div class="fabout">
+        <a class="logo" href="index.html"><svg width="30" height="30" viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="46" stroke="#D4AF37" stroke-width="4"/><g fill="#D4AF37"><rect x="33" y="44" width="11" height="26" rx="1"/><rect x="45.5" y="34" width="11" height="36" rx="1"/><rect x="58" y="50" width="9" height="20" rx="1"/></g></svg><span class="nm" style="font-family:'Playfair Display',serif;font-weight:800;font-size:18px;color:#fff;">LFA <span class="gold">Consulting</span></span></a>
+        <p>Accounting, tax, advisory and immigration support — helping South African businesses and individuals stay compliant, organised and financially confident.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="business.html">Business Accounting &amp; Tax</a>
+        <a href="personal-tax.html">Personal Tax</a>
+        <a href="immigration.html">Immigration &amp; Visas</a>
+        <a href="about.html">About Us</a>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <a href="tel:+27615359002">✆ +27 61 535 9002</a>
+        <a href="mailto:lfaconsulting1@outlook.com">✉ lfaconsulting1@outlook.com</a>
+        <a href="https://www.lfaconsulting.co.za">🌐 www.lfaconsulting.co.za</a>
+        <a href="contact.html">📍 Nationwide · Remote available</a>
+      </div>
     </div>
-    <p>Accounting · Tax · Advisory &nbsp;|&nbsp; SARS-compliant · Serving clients nationwide</p>
-    <p style="margin-top:8px">+27 61 535 9002 &nbsp;·&nbsp; <a href="mailto:lfaconsulting1@outlook.com">lfaconsulting1@outlook.com</a> &nbsp;·&nbsp; <a href="https://www.lfaconsulting.co.za">www.lfaconsulting.co.za</a></p>
-    <p style="margin-top:14px;font-size:12px;color:#7e8a99">© <span id="yr"></span> LFA Consulting. All rights reserved.</p>
+    <div class="fbottom">© <span id="yr"></span> LFA Consulting. All rights reserved. &nbsp;·&nbsp; Accounting · Tax · Advisory · Immigration</div>
   </div>
 </footer>
 
 <a class="wa" href="https://wa.me/27615359002?text=Hi%20LFA%20Consulting%2C%20I%27d%20like%20a%20free%20consultation." title="Chat on WhatsApp">🟢</a>
-
-<script>
-  document.getElementById('yr').textContent = new Date().getFullYear();
-
-  // Star rating picker
-  var stars = document.querySelectorAll('#starInput .s');
-  var ratingField = document.getElementById('ratingField');
-  function paint(v){ stars.forEach(function(s){ s.classList.toggle('on', +s.dataset.v <= v); }); }
-  stars.forEach(function(s){
-    s.addEventListener('mouseenter', function(){ paint(+s.dataset.v); });
-    s.addEventListener('click', function(){ ratingField.value = s.dataset.v; paint(+s.dataset.v); });
-  });
-  document.getElementById('starInput').addEventListener('mouseleave', function(){ paint(+(ratingField.value||0)); });
-
-  // Form submit -> Formspree (AJAX) with graceful fallback
-  var form = document.getElementById('reviewForm');
-  form.addEventListener('submit', function(e){
-    if(!ratingField.value){ e.preventDefault(); alert('Please tap a star rating first.'); return; }
-    var action = form.getAttribute('action');
-    if(action.indexOf('YOUR_FORM_ID') !== -1){
-      // No endpoint configured yet — fall back to opening an email so nothing is lost.
-      e.preventDefault();
-      var body = 'Rating: '+ratingField.value+'/5%0D%0AName: '+encodeURIComponent(form.name.value)+
-                 '%0D%0AService: '+encodeURIComponent(form.service.value)+
-                 '%0D%0AEmail: '+encodeURIComponent(form.email.value)+
-                 '%0D%0AReview: '+encodeURIComponent(form.review.value);
-      window.location.href = 'mailto:lfaconsulting1@outlook.com?subject=New%20website%20review&body='+body;
-      return;
-    }
-    e.preventDefault();
-    fetch(action, { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} })
-      .then(function(r){
-        if(r.ok){ form.style.display='none'; document.getElementById('okMsg').style.display='block'; }
-        else { form.submit(); }
-      }).catch(function(){ form.submit(); });
-  });
-</script>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
 </html>
