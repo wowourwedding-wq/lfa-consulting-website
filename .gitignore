@@ -10,6 +10,8 @@
 !immigration.html
 !about.html
 !contact.html
+!images
+!images/*.jpg
 !.github
 !.github/workflows
 !.github/workflows/deploy.yml
