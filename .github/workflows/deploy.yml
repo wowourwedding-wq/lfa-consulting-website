@@ -20,6 +20,7 @@ jobs:
           mkdir -p dist
           cp *.html dist/
           cp styles.css dist/
+          cp main.js dist/
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
