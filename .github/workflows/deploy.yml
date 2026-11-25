@@ -22,6 +22,7 @@ jobs:
           cp styles.css dist/
           cp main.js dist/
           cp -r images dist/
+          cp -r downloads dist/
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3

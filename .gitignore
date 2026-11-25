@@ -10,6 +10,12 @@
 !immigration.html
 !about.html
 !contact.html
+!work.html
+!build.py
+!src
+!src/*.html
+!downloads
+!downloads/*.pdf
 !images
 !images/*.jpg
 !.github
